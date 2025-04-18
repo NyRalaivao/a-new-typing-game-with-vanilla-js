@@ -32,6 +32,7 @@ body {
     padding: 10px;
     border-radius: 7px;
     background-color: rgb(180, 14, 14);
+    cursor: pointer;
     opacity:0.8;
     border: 0.1;
 }
