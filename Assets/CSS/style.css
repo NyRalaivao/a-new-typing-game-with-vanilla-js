@@ -153,3 +153,13 @@ main {
     transform: translateX(0);
     color: white;
   }
+  #timer{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 200px;
+    height:50px ;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+
+   
+  }
