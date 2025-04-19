@@ -55,13 +55,20 @@ body {
     flex-direction: column;
     padding: 10px;
     gap: 10px;
+   
 }
+
 
 .containt-left-top{
     border-radius: 10px;
     height: 40vh;
     background-image: url(/Assets/Images/Keyboard.jpg);
     background-size: cover;
+    transition: transform 0.3s ease-in-out;
+}
+.containt-left-top:hover{
+    transform: scale(1.03);
+
 }
 
 .containt-left-bottom{
@@ -76,6 +83,11 @@ body {
     width: 50%;
     height: 35vh;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.containt-left-bottom-box1:hover{
+    transform: scale(1.03);
+
 }
 
 .containt-left-bottom-box2{
@@ -85,8 +97,12 @@ body {
     width: 50%;
     height: 35vh;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
+.containt-left-bottom-box2:hover{
+    transform: scale(1.03);
 
+}
 .containt-right{
     width: 25%;
     display: flex;
