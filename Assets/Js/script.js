@@ -27,7 +27,7 @@ const getRandomWord = (mode) => {
 };
 
 // Initialize the typing test
-const startTest = (wordCount = 50) => {
+const startTest = (wordCount = 20) => {
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
     currentWordIndex = 0;
@@ -51,7 +51,10 @@ const startTest = (wordCount = 50) => {
 
 // Start the timer when user begins typing
 const startTimer = () => {
-    if (!startTime) startTime = Date.now();
+    if (!startTime) {
+        startTime = Date.now();
+        modeSelect.disabled = true;
+    }
 };
 
 // Calculate and return WPM & accuracy
@@ -83,6 +86,12 @@ const updateWord = (event) => {
 
             inputField.value = "";
             event.preventDefault();
+
+        if (currentWordIndex >= wordsToType.length) {
+                inputField.disabled = true;
+                modeSelect.disabled = false;
+                results.textContent += " | Partie terminée !";
+        }
         } else {
             inputField.classList.add("input-error");
 
@@ -115,6 +124,4 @@ modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
 startTest();
-
-
 
