@@ -30,11 +30,9 @@ const getRandomWord = (mode) => {
 };
 
 // Initialize the typing test
-<<<<<<< HEAD
-const startTest = (wordCount = 20) => {
-=======
-const startTest = (wordCount = 30) => {
->>>>>>> css-de-reusultat
+
+
+const startTest = (wordCount = 30) =>{
     wordsToType.length = 0; // Clear previous words
     wordDisplay.innerHTML = ""; // Clear display
     typedHistory.length = 0;
@@ -65,9 +63,7 @@ const startTest = (wordCount = 30) => {
 const startTimer = () => {
     if (!startTime) {
         startTime = Date.now();
-<<<<<<< HEAD
-        modeSelect.disabled = true;
-=======
+
         timerInterval = setInterval(() => {
             const elapsed = Math.floor((Date.now() - startTime) / 1000);
             const minutes = Math.floor(elapsed / 60);
@@ -77,7 +73,7 @@ const startTimer = () => {
                 : `⏱ Temps : ${seconds}s`;
             document.getElementById("timer").textContent = formattedTime;
         }, 1000);
->>>>>>> css-de-reusultat
+
     }
 };
 
@@ -117,21 +113,14 @@ const updateWord = (event) => {
         previousEndTime = Date.now();
         highlightNextWord();
 
-<<<<<<< HEAD
-            inputField.value = "";
-            event.preventDefault();
 
-        if (currentWordIndex >= wordsToType.length) {
-                inputField.disabled = true;
-                modeSelect.disabled = false;
-                results.textContent += " | Partie terminée !";
-        }
-        } else {
-            inputField.classList.add("input-error");
-=======
+        
+
+        
+
         inputField.value = ""; // Clear input field after space
         event.preventDefault(); // Prevent adding extra spaces
->>>>>>> css-de-reusultat
+
 
         if (currentWordIndex === wordsToType.length) {
             finishTest();
